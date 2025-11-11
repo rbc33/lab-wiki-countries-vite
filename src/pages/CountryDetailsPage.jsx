@@ -52,7 +52,7 @@ function CountryDetails() {
 									<ul>
 										{country?.borders?.map((borderCode) => (
 											<li key={borderCode}>
-												<Link href={`/${borderCode}`}>{borderCode}</Link>
+												<Link to={`/${borderCode}`}>{borderCode}</Link>
 											</li>
 										))}
 									</ul>
