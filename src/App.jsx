@@ -1,11 +1,17 @@
-import "./App.css";
+import './App.css'
+import CountryDetails from './pages/CountryDetailsPage'
+import HomePage from './pages/HomePage'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  return (
-    <div className="App">
-      <h1>LAB | React WikiCountries</h1>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/:id" element={<CountryDetails />} />
+			</Routes>
+		</div>
+	)
 }
 
-export default App;
+export default App
