@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -52,7 +52,7 @@ function CountryDetails() {
 									<ul>
 										{country?.borders?.map((borderCode) => (
 											<li key={borderCode}>
-												<a href={`/${borderCode}`}>{borderCode}</a>
+												<Link href={`/${borderCode}`}>{borderCode}</Link>
 											</li>
 										))}
 									</ul>
